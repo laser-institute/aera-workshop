@@ -20,13 +20,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The transition to digital learning has made available new sources of data, providing researchers new opportunities for understanding and improving STEM learning. Data sources such as digital learning environments and administrative data systems, as well as data produced by social media websites and the mass digitization of academic and practitioner publications, hold enormous potential to address a range of pressing problems in STEM Education, but collecting and analyzing text-based data also presents unique challenges.
 
-**Text Mining (TM) Module 1: Public Sentiment and the State Standards** will help demonstrate how text mining can be applied in STEM education research and provide LASER Institute scholars hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Specifically, the four learning labs that make up this module address the following topics:
+**Text Mining (TM) Module 1: Public Sentiment and the State Standards** will help demonstrate how text mining can be applied in STEM education research and provide LASER Institute scholars hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Specifically, the four learning labs that make up this module address the following processes :
 
--   **Learning Lab 1: Tidy Text, Tokens, & Twitter.** We take a closer look at the literature guiding our analysis; wrangle our data into a one-token-per-row tidy text format; and use simple word counts to explore our tweets about the common core and next generation science standards.
+-   **Learning Lab 1: Tidy Text, Tokens, & Twitter.** We take a closer look at the literature to ***prepare*** for our analysis; ***wrangle*** our data into a one-token-per-row tidy text format; and use simple word counts to ***explore*** our tweets about the common core and next generation science standards.
 
--   **Learning Lab 2: Come to the Dark Side.** We focus on the use of lexicons in our third lab and introduce the {vader} package to compare the sentiment of tweets about the NGSS and CCSS state standards in order to better understand public reaction to these two curriculum reform efforts. 
+-   **Learning Lab 2: Come to the Dark Side.** We focus on the use of lexicons in our third lab and introduce the {vader} package to ***model*** the sentiment of tweets about the NGSS and CCSS state standards in order to better understand public reaction to these two curriculum reform efforts. 
 
--   **Learning Lab 3: A Tale of Two Standards.** We wrap our look at public sentiment around STEM state curriculum standards by selecting an analysis that provides some unique insight; refining and polishing a data product; and writing a brief narrative to communicate findings in response to our research questions.
+-   **Learning Lab 3: A Tale of Two Standards.** We wrap our look at public sentiment around STEM state curriculum standards by selecting an analysis that provides some unique insight; refining and polishing a data product; and writing a brief narrative to ***communicate*** findings in response to our research questions.
 
 -   **Learning Lab 4: rTweet & the Twitter API (Optional).** This supplemental learning lab will get you up and running with the Twitter API in case you are interested in using data from Twitter in your own research. This lab can only be completed by those who created a Twitter Developer account.
 
@@ -206,13 +206,7 @@ Try using the "Import Dataset" feature in the upper right environment pane to im
 The code generated should look something like this:
 
 ```{r}
-ngss_tweets <- read_csv(here("data", "ngss-tweets.csv")), 
-          col_types = cols(author_id = col_character(), 
-                           id = col_character(),
-                           conversation_id = col_character(), 
-                           in_reply_to_user_id = col_character()
-                           )
-          )
+ngss_tweets <- read_csv(here("data", "ngss-tweets.csv"))
 ```
 
 Use the following code chunk to inspect your tweets using a function you've learned so for for viewing your data:
@@ -598,7 +592,9 @@ Also, take a look at the help file for `wordclouds2` to see if there might be ot
 
 As highlighted in [Chapter 3 of Data Science in Education Using R](https://datascienceineducation.com/c03.html) , the Model step of the data science process entails "using statistical models, from simple to complex, to understand trends and patterns in the data." The authors note that while descriptive statistics and data visualization during the Explore step can help us to identify patterns and relationships in our data, statistical models can be used to help us determine if relationships, patterns and trends are actually meaningful.
 
-In TM Learning Lab 3, we'll take a closer look at the study by @rosenberg2020 and how they used modeling to compare differences in sentiment between teachers and non-teachers discussing the common core.
+Recall from the PREPARE section that the Rosenberg et al. study, and consequently this learning lab, was guided in part by the following question:
+
+> What is the public sentiment expressed toward the NGSS?
 
 ## 5. COMMUNICATE
 
