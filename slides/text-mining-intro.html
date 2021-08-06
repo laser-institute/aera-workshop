@@ -24,6 +24,8 @@ class: center, middle, inverse, title-slide
 
 ```r
 library(tidytext)
+library(dplyr)
+library(DT)
 ```
 
 ---
@@ -128,9 +130,10 @@ class: inverse, center, middle
 
 # Basic Text Analysis
 
-&gt; ... it’s a mistake to imagine that text mining is now in a sort of crude infancy, whose real possibilities will only be revealed after NLP matures. **Wordcounts are amazing!**
 
 .pull-left[
+... it’s a mistake to imagine that text mining is now in a sort of crude infancy, whose real possibilities will only be revealed after NLP matures. **Wordcounts are amazing!**
+
 - Text Preprocessing
 - Word Counts
 - Term Frequencies
@@ -138,6 +141,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
+Yep. A Word Cloud.
 ![Yep. A Word Cloud](img/ngss-cloud.png)
 ]
 
@@ -147,24 +151,61 @@ Underwood, T. (2013). [Wordcounts are amazing](https://tedunderwood.com/2013/02/
 
 ---
 
-# Dictionary-Based Approaches
-
-Dictionary-based text analysis uses predefined list of words, or **lexicons**, to assign a particular meaning, value, or category to each word in you data. 
+# Dictionary-Based Methods
 
 .pull-left[
+Dictionary-based text analysis uses predefined list of words, or **lexicons**, to assign a particular meaning, value, or category to each word in you data:  
+
 - Custom Dictionaries
 - Stop Words
 - Sentiment Lexicons
 - Linguistic Inquiry Word Count (LIWC)
 ]
-
 .pull-right[
+Bing Lexicon Example: 
 
-
+|word       |sentiment |
+|:----------|:---------|
+|antagonize |negative  |
+|cons       |negative  |
+|harasses   |negative  |
+|spoiled    |negative  |
+|principled |positive  |
 ]
 
 .footnote[
-Underwood, T. (2013). [Wordcounts are amazing](https://tedunderwood.com/2013/02/20/wordcounts-are-amazing/). The Stone and the Shell.
+Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/textasdata/dictionary-methods/rmarkdown/Dictionary-Based_Text_Analysis.html). Text as Data.
+]
+
+---
+
+
+
+
+# Topic Modeling
+
+.pull-left[
+Dictionary-based text analysis uses predefined list of words, or **lexicons**, to assign a particular meaning, value, or category to each word in you data:  
+
+- Custom Dictionaries
+- Stop Words
+- Sentiment Lexicons
+- Linguistic Inquiry Word Count (LIWC)
+]
+.pull-right[
+Bing Lexicon Example: 
+
+|word       |sentiment |
+|:----------|:---------|
+|profuse    |positive  |
+|struggled  |negative  |
+|antagonize |negative  |
+|flicering  |negative  |
+|clamor     |negative  |
+]
+
+.footnote[
+Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/textasdata/dictionary-methods/rmarkdown/Dictionary-Based_Text_Analysis.html). Text as Data.
 ]
 
 ---

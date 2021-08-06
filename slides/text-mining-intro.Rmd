@@ -15,6 +15,8 @@ output:
 
 ```{r}
 library(tidytext)
+library(dplyr)
+library(DT)
 ```
 
 ---
@@ -119,9 +121,10 @@ class: inverse, center, middle
 
 # Basic Text Analysis
 
-> ... it’s a mistake to imagine that text mining is now in a sort of crude infancy, whose real possibilities will only be revealed after NLP matures. **Wordcounts are amazing!**
 
 .pull-left[
+... it’s a mistake to imagine that text mining is now in a sort of crude infancy, whose real possibilities will only be revealed after NLP matures. **Wordcounts are amazing!**
+
 - Text Preprocessing
 - Word Counts
 - Term Frequencies
@@ -129,6 +132,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
+Yep. A Word Cloud.
 ![Yep. A Word Cloud](img/ngss-cloud.png)
 ]
 
@@ -138,26 +142,51 @@ Underwood, T. (2013). [Wordcounts are amazing](https://tedunderwood.com/2013/02/
 
 ---
 
-# Dictionary-Based Approaches
-
-Dictionary-based text analysis uses predefined list of words, or **lexicons**, to assign a particular meaning, value, or category to each word in you data. 
+# Dictionary-Based Methods
 
 .pull-left[
+Dictionary-based text analysis uses predefined list of words, or **lexicons**, to assign a particular meaning, value, or category to each word in you data:  
+
 - Custom Dictionaries
 - Stop Words
 - Sentiment Lexicons
 - Linguistic Inquiry Word Count (LIWC)
 ]
-
 .pull-right[
-```{r}
-
+Bing Lexicon Example: 
+```{r, echo=F}
+knitr::kable(sample_n(get_sentiments("bing"), 5))
 ```
-
 ]
 
 .footnote[
-Underwood, T. (2013). [Wordcounts are amazing](https://tedunderwood.com/2013/02/20/wordcounts-are-amazing/). The Stone and the Shell.
+Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/textasdata/dictionary-methods/rmarkdown/Dictionary-Based_Text_Analysis.html). Text as Data.
+]
+
+---
+
+
+
+
+# Topic Modeling
+
+.pull-left[
+Dictionary-based text analysis uses predefined list of words, or **lexicons**, to assign a particular meaning, value, or category to each word in you data:  
+
+- Custom Dictionaries
+- Stop Words
+- Sentiment Lexicons
+- Linguistic Inquiry Word Count (LIWC)
+]
+.pull-right[
+Bing Lexicon Example: 
+```{r, echo=F}
+knitr::kable(sample_n(get_sentiments("bing"), 5))
+```
+]
+
+.footnote[
+Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/textasdata/dictionary-methods/rmarkdown/Dictionary-Based_Text_Analysis.html). Text as Data.
 ]
 
 ---
