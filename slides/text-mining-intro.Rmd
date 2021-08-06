@@ -189,6 +189,12 @@ knitr::kable(sample_n(get_sentiments("bing"), 5))
 Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/textasdata/dictionary-methods/rmarkdown/Dictionary-Based_Text_Analysis.html). Text as Data.
 ]
 
----
 
+---
+class: inverse, center, middle
+
+# How is text mining **used in education** research?
+
+
+---
 
