@@ -427,7 +427,7 @@ In the code chunk below, filter, count and select the top 50 tokens to create a 
 ```{r}
 ss_tidy_tweets %>%
   filter(standards == "ngss") %>%
-  filter(!word %in% c("#ngss", "science", "ngss", "standards")) %>%
+  filter(!word %in% c("#ngss", "science", "ngss", "standards", "#ngsschat")) %>%
   count(word, sort = TRUE) %>%
   top_n(50) %>%
   wordcloud2()
