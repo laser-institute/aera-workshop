@@ -162,7 +162,8 @@ Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/t
 # Topic Modeling
 
 .pull-left[
-Dictionary-based text analysis uses predefined list of words, or **lexicons**, to assign a particular meaning, value, or category to each word in you data:  
+With a bit of tongue-in-cheek, [Meeks and Weingart](http://journalofdigitalhumanities.org/2-1/dh-contribution-to-topic-modeling/) describe topic modeling as leveraging occult statistical methods... to provide seductive but obscure results in the forms of easily interpreted (and manipulated) 'topics.'
+
 
 - Custom Dictionaries
 - Stop Words
@@ -170,14 +171,11 @@ Dictionary-based text analysis uses predefined list of words, or **lexicons**, t
 - Linguistic Inquiry Word Count (LIWC)
 ]
 .pull-right[
-Bing Lexicon Example: 
-```{r, echo=F}
-knitr::kable(sample_n(get_sentiments("bing"), 5))
-```
+Bing Lexicon
 ]
 
 .footnote[
-Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/textasdata/dictionary-methods/rmarkdown/Dictionary-Based_Text_Analysis.html). Text as Data.
+Vayansky, I., & Kumar, S. A. (2020). [A review of topic modeling methods.](https://www.sciencedirect.com/science/article/pii/S0306437920300703?casa_token=o9sh0a7PIesAAAAA:_6LdKTPZL8OB8kQpuz9J2zd25PMkQQzZRBpdjREcCjADeUVgRUXVNBsUKYz1xNHetj9sEOH_VA) Information Systems, 94, 101582.
 ]
 
 
@@ -189,7 +187,7 @@ class: inverse, center, middle
 ---
 #  Text Mining Considerations
 
-Despite the potential advantages of text-based data captured by educational technologies, they also create a range of challenges for STEM Ed researchers. 
+Despite the potential advantages of text-based data captured by educational technologies, **TM poses a number of challenges** for STEM Ed researchers. 
 
 
 .footnote[
@@ -261,8 +259,8 @@ TM has been applied to **support student engagement and collaboration**, especia
 ]
 
 .panel[.panel-name[Other Uses]
- Also, examples of different and less popular goals (Others category) include: 
-- automatic summarizing texts
+Other applications of text mining in STEM Ed Research include: 
+- Automatic text summarization
 - Analytics & visualization tools
 - Curriculum adaptation
 - Recommendation systems
