@@ -240,23 +240,34 @@ xaringanExtra::use_panelset()
 .panelset[
 
 .panel[.panel-name[Performance]
-TM has been largely used to evaluate student's performance in different contexts, especially to evaluate essays and online assignments.
+TM has been largely used to **evaluate academic  performance** in different contexts, especially to  essays and online assignments.
 
-.pull-left[
-- hgdd
-]
-]
-
-.panel[.panel-name[Feedback]
-Intro...
-
-]
-
-.panel[.panel-name[Support]
- Intro...
+- writing style
+- use of argumentation
+- plagiarism detection
+- peer interaction
 ]
 
 .panel[.panel-name[Feedback]
+To help improve performance, TM is used to  **provide student feedback**, often based on both their interactions and activities 
+
+- Intelligent Tutoring Systems
+- Question-answering applications
+- Assist teacher  feedback
+- Support formative feedback
+
+]
+
+.panel[.panel-name[Engagement]
+TM has been applied to **support student engagement and collaboration**, especially in distance learning courses. 
+
+- Automated writing scaffolds
+- Analysis of interactional resources
+- Student sentiment extraction
+- Dropout prevention
+]
+
+.panel[.panel-name[Engagement]
  Intro...
 ]
 
