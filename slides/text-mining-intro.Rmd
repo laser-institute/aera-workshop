@@ -13,6 +13,12 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+
+---
 # Overview
 
 --
@@ -232,5 +238,32 @@ class: inverse, center, middle
 ---
 # Applications in STEM Ed Research
 
+.panelset[
+
+.panel[.panel-name[Performance]
+TM has been largely used to evaluate student's performance in different contexts, especially to evaluate essays and online assignments.
+
+.pull-left[
+- hgdd
+]
+]
+
+.panel[.panel-name[Feedback]
+Intro...
+
+]
+
+.panel[.panel-name[Support]
+ Intro...
+]
+
+.panel[.panel-name[Feedback]
+ Intro...
+]
 
 
+]
+
+.footnote[
+Ferreira‐Mello, R., André, M., Pinheiro, A., Costa, E., & Romero, C. (2019). [Text mining in education.](https://wires.onlinelibrary.wiley.com/doi/full/10.1002/widm.1332?casa_token=lZT4D6PBOnIAAAAA%3AgL-AaN62g7YuQNyI5PIt6uguw7x2qnpFt8U_fkyM4ipRXUa6JzqcDH72dNU_8R21a_Abi4fNSucZWg) Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 9(6), e1332.
+]
