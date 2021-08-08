@@ -24,25 +24,25 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 **1:00-1:30.** Overview of Learning Analytics in STEM Ed Research (LASER)
 
--   The
+-   **Intro to LASER** consists of a [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) designed to provide an overview of the Learning Analytics in STEM Ed Research (LASER) Institute, introduce the field of Learning Analytics, and prepare participants to use [RStudio Cloud](https://rstudio.cloud/) to access the presentations and demos located on our [AERA-ICPSR LASER Workshop workspace](https://rstudio.cloud/spaces/159154/join?access_code=MlqXbTuL20QPR7GVmyyKDkuWwqUvhRcmVFvRRZuz).
 
-**1:30-1:40.** [RStudio Cloud Setup](https://rstudio.cloud/spaces/159154/join?access_code=MlqXbTuL20QPR7GVmyyKDkuWwqUvhRcmVFvRRZuz)
+**1:30-1:40.** RStudio Cloud Setup/Break
 
 **1:40-2:20.** Intro to Text Mining (TM) in STEM
 
--   **Intro to TM in STEM** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research. and provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content is from [Text Mining (TM) Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop. This component
+-   **Intro to Text Mining** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [TM Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop.
 
 **2:20-2:30.** Q&A/Break
 
-**2:30-3:10.** Intro to **Machine Learning** in STEM
+**2:30-3:10.** Intro to Machine Learning (ML) in STEM
 
--   
+-   **Intro to Machine Learning** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [ML Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop.
 
 **3:10-3:20.** Q&A/Break
 
-**3:20-4:00.** Intro to **Social Network Analysis** in STEM
+**3:20-4:00.** Intro to Social Network Analysis (SNA) in STEM
 
--   
+-   **Intro to Social Network Analysis** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [SNA Module 1: The Social Network Perspective and MOOC-Eds](https://github.com/laser-institute/network-analysis) taught at the LASER Institute Summer Workshop.
 
 ### Acknowledgements
 
@@ -60,7 +60,7 @@ The **PEERS Research Methods Series** consists of workshops presented in colla
 
 [**Joshua M. Rosenberg**](https://tpte.utk.edu/people/joshua-rosenberg-phd/) is an assistant professor of STEM education and faculty fellow at the Center for Enhancing Education in Mathematics and Sciences at the University of Tennessee, Knoxville. His research focuses on how learners think of and with data, particularly in science education settings. Professor Rosenberg tries to understand how practices such as creating, representing, and modeling data create new opportunities for learning how to use data to pose and answer questions about scientific phenomena. Professor Rosenberg has been awarded more than three million dollars in federal grants as principal investigator (PI) or co-PI and has published in outlets such as Journal of Research in Science Teaching, Computers & Education, and Teaching and Teacher Education.
 
-Dr. Shiyan Jiang is
+[**Jennifer Houchins**](https://www.fi.ncsu.edu/people/jkhouchi/) has a combined 15 years of professional experience as both an informal STEM educator and a developer of educational technology software. As the director of technology programs, Houchins contributes to research, development and outreach efforts of emerging technologies and their use in K-12 and higher education settings. She is also responsible for the overall management of the Friday Institute's IT services and resources and provides leadership in IT operations, project IT support and furthering the overall mission of the Friday Institute.
 
 ### The 2021 LASER Scholars
 
