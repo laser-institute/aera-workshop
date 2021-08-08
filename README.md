@@ -22,27 +22,27 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 ### Schedule
 
-**1:00-1:30.** Overview of Learning Analytics in STEM Ed Research (LASER)
+**1:00-1:30.** Introduction to the Learning Analytics in STEM Ed Research (LASER)
 
--   **Intro to LASER** consists of a [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) designed to provide an overview of the Learning Analytics in STEM Ed Research (LASER) Institute, introduce the field of Learning Analytics, and prepare participants to use [RStudio Cloud](https://rstudio.cloud/) to access the presentations and demos located on our [AERA-ICPSR LASER Workshop workspace](https://rstudio.cloud/spaces/159154/join?access_code=MlqXbTuL20QPR7GVmyyKDkuWwqUvhRcmVFvRRZuz).
+-   **Introduction to the LASER Institute** consists of a [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) designed to provide an overview of the Learning Analytics in STEM Ed Research (LASER) Institute, introduce the field of Learning Analytics, and prepare participants to use [RStudio Cloud](https://rstudio.cloud/) to access the presentations and demos located on our [AERA-ICPSR LASER Workshop workspace](https://rstudio.cloud/spaces/159154/join?access_code=MlqXbTuL20QPR7GVmyyKDkuWwqUvhRcmVFvRRZuz).
 
 **1:30-1:40.** RStudio Cloud Setup/Break
 
 **1:40-2:20.** Intro to Text Mining (TM) in STEM
 
--   **Intro to Text Mining** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [TM Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop.
+-   **Introduction to Text Mining** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [TM Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop.
 
 **2:20-2:30.** Q&A/Break
 
 **2:30-3:10.** Intro to Machine Learning (ML) in STEM
 
--   **Intro to Machine Learning** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [ML Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop.
+-   **Introduction to Machine Learning** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/machine-learning-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/machine-learning-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [ML Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/machine-learning) taught at the LASER Institute Summer Workshop.
 
 **3:10-3:20.** Q&A/Break
 
 **3:20-4:00.** Intro to Social Network Analysis (SNA) in STEM
 
--   **Intro to Social Network Analysis** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [SNA Module 1: The Social Network Perspective and MOOC-Eds](https://github.com/laser-institute/network-analysis) taught at the LASER Institute Summer Workshop.
+-   **Introduction to Social Network Analysis** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content for this workshop is drawn from from [SNA Module 1: The Social Network Perspective and MOOC-Eds](https://github.com/laser-institute/network-analysis) taught at the LASER Institute Summer Workshop.
 
 ### Acknowledgements
 
