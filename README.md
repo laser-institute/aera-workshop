@@ -10,7 +10,7 @@ This workshop will introduce participants to the Learning Analytics (LA), an eme
 
 The instructors will provide a brief overview of LA methodologies, literature, applications, and ethical issues as they relate to STEM education, with an emphasis on digital learning environments and broadening participation in STEM programs. Participants will be introduced to open-access curriculum materials developed as part of the [Learning Analytics in STEM Education Research (LASER) Institute](https://www.fi.ncsu.edu/projects/laser-institute/) to gain hands-on experience with computational analysis techniques (e.g. network analysis, text mining, machine learning) using R and RStudio.
 
-### **Instructors:**
+### **Instructors**
 
 -   Shaun B. Kellogg, North Carolina State University​
 
@@ -30,7 +30,7 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 **1:40-2:20.** Intro to Text Mining (TM) in STEM
 
--   **Intro to TM in STEM** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) from [Text Mining (TM) Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop. This component will help illustrate how text mining can be applied in STEM education research and provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data.
+-   **Intro to TM in STEM** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how text mining can be applied in STEM education research. and provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing text-based data. Content is from [Text Mining (TM) Module 1: Public Sentiment and the State Standards](https://github.com/laser-institute/text-mining) taught at the LASER Institute Summer Workshop. This component
 
 **2:20-2:30.** Q&A/Break
 
@@ -56,7 +56,9 @@ The **PEERS Research Methods Series** consists of workshops presented in colla
 
 [**Shiyan Jiang**](https://ced.ncsu.edu/people/shiyan-jiang/) received her Ph.D. in technology-enhanced STEM education from the University of Miami in 2018. She was a postdoc at Carnegie Mellon University and worked in designing an innovative writing feedback system. Currently, she is an assistant professor of Learning Design and Technology at North Carolina State University. She designs and studies technology-enhanced learning environments to facilitate the development of STEM identities.
 
-[**Joshua M. Rosenberg**](https://tpte.utk.edu/people/joshua-rosenberg-phd/) (PhD, Michigan State University) is an assistant professor of STEM education and faculty fellow at the Center for Enhancing Education in Mathematics and Sciences at the University of Tennessee, Knoxville. His research focuses on how learners think of and with data, particularly in science education settings. Professor Rosenberg tries to understand how practices such as creating, representing, and modeling data create new opportunities for learning how to use data to pose and answer questions about scientific phenomena. Professor Rosenberg has been awarded more than three million dollars in federal grants as principal investigator (PI) or co-PI and has published in outlets such as Journal of Research in Science Teaching, Computers & Education, and Teaching and Teacher Education.
+[**Rob Moore**](https://education.ufl.edu/faculty/moore-rob/) is an Assistant Professor of Educational Technology in the School of Teaching and Learning at the University of Florida. His research analyzes online learning environments, focusing on massive open online courses (MOOCs), to identify ways to improve student learning in those contexts. He is particularly interested in leveraging learning analytics to ensure that online learning environments offer similar critical thinking and engagement levels as in face-to-face instruction.
+
+[**Joshua M. Rosenberg**](https://tpte.utk.edu/people/joshua-rosenberg-phd/) is an assistant professor of STEM education and faculty fellow at the Center for Enhancing Education in Mathematics and Sciences at the University of Tennessee, Knoxville. His research focuses on how learners think of and with data, particularly in science education settings. Professor Rosenberg tries to understand how practices such as creating, representing, and modeling data create new opportunities for learning how to use data to pose and answer questions about scientific phenomena. Professor Rosenberg has been awarded more than three million dollars in federal grants as principal investigator (PI) or co-PI and has published in outlets such as Journal of Research in Science Teaching, Computers & Education, and Teaching and Teacher Education.
 
 Dr. Shiyan Jiang is
 
