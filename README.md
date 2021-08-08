@@ -10,7 +10,7 @@ This workshop will introduce participants to the Learning Analytics (LA), an eme
 
 The instructors will provide a brief overview of LA methodologies, literature, applications, and ethical issues as they relate to STEM education, with an emphasis on digital learning environments and broadening participation in STEM programs. Participants will be introduced to open-access curriculum materials developed as part of the [Learning Analytics in STEM Education Research (LASER) Institute](https://www.fi.ncsu.edu/projects/laser-institute/) to gain hands-on experience with computational analysis techniques (e.g. network analysis, text mining, machine learning) using R and RStudio.
 
-### Presenters 
+### Presenters
 
 -   Shaun B. Kellogg, North Carolina State University​
 
@@ -46,7 +46,7 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 ### Acknowledgements
 
-This workshop is part of the [**AERA-ICPSR Partnership for Expanding Education Research in STEM (PEERS) Data Hub**](https://www.icpsr.umich.edu/web/pages/peersdatahub/) announces the **PEERS Research Methods Series** a webinar series of research capacity-building workshops that focus on research methods used in STEM education research. 
+This workshop is part of the [AERA-ICPSR Partnership for Expanding Education Research in STEM (PEERS) Data Hub](https://www.icpsr.umich.edu/web/pages/peersdatahub/) announces the **PEERS Research Methods Series** a webinar series of research capacity-building workshops that focus on research methods used in STEM education research. 
 
 The **PEERS Research Methods Series** consists of workshops presented in collaboration with the 11 Institutes in Research Methods funded by the National Science Foundation  directed to NSF's Building Capacity for STEM Education Research (BCSER) program. Aimed at early- and mid-career researchers and scholars, the capacity-building webinar series features projects that seek to promote research expertise in applications of computational, quantitative, qualitative, and evaluative research methods useful to STEM education researchers and broaden the STEM professional workforce.
 
