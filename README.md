@@ -10,7 +10,7 @@ This workshop will introduce participants to the Learning Analytics (LA), an eme
 
 The instructors will provide a brief overview of LA methodologies, literature, applications, and ethical issues as they relate to STEM education, with an emphasis on digital learning environments and broadening participation in STEM programs. Participants will be introduced to open-access curriculum materials developed as part of the [Learning Analytics in STEM Education Research (LASER) Institute](https://www.fi.ncsu.edu/projects/laser-institute/) to gain hands-on experience with computational analysis techniques (e.g. network analysis, text mining, machine learning) using R and RStudio.
 
-### **Instructors**
+### Presenters 
 
 -   Shaun B. Kellogg, North Carolina State University​
 
