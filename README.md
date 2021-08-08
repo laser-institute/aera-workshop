@@ -1,4 +1,6 @@
-## A LASER Focus on Understanding and Improving STEM Education
+<img src="img/laser-logo.jpeg" width="50%"/>
+
+A LASER Focus on Understanding and Improving STEM Education
 
 ​**Date/Time: Wednesday, August 11, 2021; 1:00pm–4:00pm**
 
