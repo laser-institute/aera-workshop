@@ -1,4 +1,4 @@
-<img src="img/laser-logo.jpeg" width="20%"/>
+<img src="img/laser-logo.jpeg" width="30%"/>
 
 ## A LASER Focus on Understanding and Improving STEM Education
 
