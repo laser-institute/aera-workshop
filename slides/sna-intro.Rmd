@@ -6,14 +6,30 @@ institute: "The LASER Institute"
 date: "2021/08/11 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
+    css:
+       - default
+       - css/laser.css
+       - css/laser-fonts.css
     lib_dir: libs
+    seal: false
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      
+      slideNumberFormat: |
+         <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+         </div>
 ---
+class: clear, title-slide, inverse, center, top, middle
 
+# `r rmarkdown::metadata$title`
+## `r rmarkdown::metadata$subtitle`
+### `r rmarkdown::metadata$author`
+###  2021/08/11 (updated: `r Sys.Date()`)
+
+---
 # Agenda
 
 1. Brief overview of network analysis (15 min.)
@@ -21,7 +37,7 @@ output:
 
 ---
 
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 1. Short presentation
 
@@ -47,7 +63,7 @@ class: inverse, center, middle
 1. How is network analysis **used in STEM education** research? 
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 1.1. Why network anaylsis and what is it?
 
@@ -69,7 +85,7 @@ Krumm, A., Means, B., & Bienkowski, M. (2018). [Learning analytics goes to schoo
 ]
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 1.2. What is network analysis exactly?
 
@@ -87,7 +103,7 @@ Krumm, A., Means, B., & Bienkowski, M. (2018). [Learning analytics goes to schoo
 ]
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 1.3. What are common techniques used for quantifying text? 
 
@@ -120,7 +136,7 @@ Yep. A Word Cloud.
 ]
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 1.4. What are some of the technical and ethical considerations of text mining? 
 
@@ -134,7 +150,7 @@ class: inverse, center, middle
 - going beyond IRB with respect to using digital traces
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 1.5. How is text mining used in STEM education research?
 
@@ -153,4 +169,3 @@ class: inverse, center, middle
 Let's head over to the `aera-workshop` project in RStudio Cloud.
 
 Click on `sna-demo.Rmd` to begin!
-

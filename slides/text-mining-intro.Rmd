@@ -6,14 +6,30 @@ institute: "The LASER Institute"
 date: "2021/08/11 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
+    css:
+       - default
+       - css/laser.css
+       - css/laser-fonts.css
     lib_dir: libs
+    seal: false
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      slideNumberFormat: |
+         <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+         </div>
 ---
+class: clear, title-slide, inverse, center, top, middle
 
+# `r rmarkdown::metadata$title`
+## `r rmarkdown::metadata$subtitle`
+### `r rmarkdown::metadata$author`
+###  2021/08/11 (updated: `r Sys.Date()`)
 
+---
 # Overview
 
 1. Why text mining and **what is it** exactly?
@@ -25,7 +41,7 @@ output:
 1. How is text mining **used in STEM education** research? 
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 1. Why text mining and what is it?
 
@@ -92,17 +108,17 @@ Text mining **is not**...
 ]
 
 ---
-class: center, middle
+class: clear, center, middle
 
 A central question in text mining is: 
 
-# How do we **quantify** what a document is about?
+## How do we **quantify** what a document is about?
 
 .footnote[
 Silge, J., & Robinson, D. (2017). [Text mining with R: A tidy approach.](https://www.tidytextmining.com) " O'Reilly Media, Inc.".]
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 2. What are common techniques used for quantifying text? 
 
@@ -158,7 +174,7 @@ Bail, C. (2019). [Dictionary-Based Text Analysis in R](https://cbail.github.io/t
 ]
 
 ---
-
+class: no-logo
 # Topic Modeling
 
 With a bit of tongue-in-cheek, [Meeks and Weingart](http://journalofdigitalhumanities.org/2-1/dh-contribution-to-topic-modeling/) describe topic modeling as:
@@ -175,7 +191,7 @@ Vayansky, I., & Kumar, S. A. (2020). [A review of topic modeling methods.](https
 
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 # 3. What are some of the technical and ethical considerations of text mining? 
 
@@ -212,7 +228,7 @@ Ethical & Legal
 
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 ```{r xaringan-panelset, echo=FALSE}
 xaringanExtra::use_panelset()
@@ -269,7 +285,7 @@ Ferreira‐Mello, R., André, M., Pinheiro, A., Costa, E., & Romero, C. (2019). 
 ]
 
 ---
-class: inverse, center, middle
+class: clear, inverse, center, middle
 
 #Learning Lab Demo
 
