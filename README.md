@@ -36,7 +36,7 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 **2:30-3:10.** Intro to Machine Learning (ML) in STEM
 
--   **Introduction to Machine Learning** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/machine-learning-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/machine-learning-demo.html) designed to illustrate how machine learning can be applied in STEM education research and to provide workshop participants hands-on experience with the process of building a machine learning model. Content for this workshop is drawn from from [ML Module](https://github.com/laser-institute/machine-learning)XXX taught at the LASER Institute Summer Workshop.
+-   **Introduction to Machine Learning** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/machine-learning-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/machine-learning-demo.html) designed to illustrate how machine learning can be applied in STEM education research and to provide workshop participants hands-on experience with the process of building a machine learning model. Content for this workshop is drawn from from [ML Module1: Building a e](https://github.com/laser-institute/machine-learning) taught at the LASER Institute Summer Workshop.
 
 **3:10-3:20.** Q&A/Break
 
