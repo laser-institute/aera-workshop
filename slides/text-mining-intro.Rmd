@@ -142,6 +142,7 @@ Dictionary-based text analysis uses predefined list of words, or **lexicons**, t
 - Sentiment Lexicons
 - Linguistic Inquiry Word Count (LIWC)
 ]
+
 .pull-right[
 Bing Lexicon Example: 
 ```{r, echo=F, message=FALSE}
