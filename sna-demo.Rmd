@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 In this section, we load packages with the `library()` function and read data using the `read_csv()` function.
 
 - `d` refers to the data we loaded on teachers' relations
-- `u` refers to "user"-level data (e.g., on teachers' years of edperience)
+- `u` refers to "user"-level data (e.g., on teachers' years of experience)
 
 ```{r}
 set.seed(0811)
