@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning: Build a baseline model"
-author: ""
+author: "The LASER TEAM"
 output:
   html_document: default
   pdf_document: default
