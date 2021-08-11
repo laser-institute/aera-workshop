@@ -1,6 +1,5 @@
 ---
-title: 'Public Sentiment and the State Standards'
-subtitle: 'Text Mining Module 1 Overview'
+title: 'Social Network Analysis Demonstration'
 author: "The LASER Team"
 date: "`r format(Sys.Date(),'%B %e, %Y')`"
 output:
@@ -20,7 +19,11 @@ Welcome to the \*social network analysis\* demo! To complete this, click the gre
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-In this section, we load packages with the `library()` function
+In this section, we load packages with the `library()` function and read data using the `read_csv()` function.
+
+- `d` refers to the data we loaded on teachers' relations
+- `u` refers to "user"-level data (e.g., on teachers' years of edperience)
+
 ```{r}
 set.seed(0811)
 
@@ -34,6 +37,10 @@ d <- read_csv(here('data', 'teacher-network-data-relations.csv'))
 u <- read_csv(here('data', 'teacher-network-data-users.csv'))
 ```
 
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+Run the following two code chunks to take a _glimpse_ at your data. Below, add a few notes on what you _notice_ and _wonder_
+
 ```{r}
 glimpse(d)
 ```
@@ -42,9 +49,16 @@ glimpse(d)
 glimpse(u)
 ```
 
-#### [**Your Turn**]{style="color: green;"} **⤵**
+What do you _notice_ and/or _wonder_ about this data? Add a note or two below!
+
+- 
+- 
 
 ## 2. Preparing Data
+
+In this section, we prepare our data to be in edgelist format. 
+
+#### [**Your Turn**]{style="color: green;"} **⤵**
 
 ```{r}
 d_long <- d %>% 
@@ -56,16 +70,26 @@ d_long <- d %>%
 
 d_long
 ```
+What is different about the edgelist data now? Add one or more observations (you can add additional observations by adding more dashes):
 
-#### [**Your Turn**]{style="color: green;"} **⤵**
+- 
+- 
 
 ## 3. Creating a Graph 'Object' and Preparing to Visualize the Network
+
+This next step is key in that we use the `tbl_graph()` function to create a network "object"; if that sounds a bit vague, it should! An "object" refers to a type of data in R. Here, it's one that is specific to the packages we are using for social network analysis. 
+
+Here, we create a network object with only the edgelist. 
 
 ```{r}
 g <- tbl_graph(edges = d_long)
 
 g
 ```
+
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+Let's create this object again, but also adding _nodes_ information, or the user-level information we also loaded earlier on.
 
 ```{r}
 g <- tbl_graph(edges = d_long, nodes = u)
@@ -78,21 +102,33 @@ g <- g %>%
   mutate(popularity = centrality_degree(mode = 'in')) %>% 
   activate("edges") %>% 
   mutate(nominee_rank = as.factor(nominee_rank))
+
+g
 ```
 
-#### [**Your Turn**]{style="color: green;"} **⤵**
+What do you notice about the `g` network object? How does it appear different from either the edgelist or the user-level data we loaded?
+
+- 
+- 
 
 ## 4. Creating and Refining a Network Visualization
 
+Perhaps our question has to do with who is most central (and, possibly, the most influential) within our network.
+
+Let's start with a simple visualization of our network using `geom_edge_fan()` and `geom_node_point()`.
+
 ```{r}
 ggraph(g, layout = 'kk') + 
-  geom_edge_fan(aes(alpha = nominee_rank), 
-                arrow = arrow(length = unit(4, 'mm')),
-                start_cap = circle(6, 'mm'),
-                end_cap = circle(6, 'mm')) + 
-  geom_node_point(aes(size = popularity)) +
+  geom_edge_fan() +
+  geom_node_point() +
   theme_graph()
 ```
+
+We can enhance this visualization in numerous ways, such as by:
+
+- Sizing the points based on popularity, or in-degree centrality (how many times a person was a nominee)
+- Coloring the points by subject
+- Changing the hue of the edges based upon the order in which one was nominated
 
 ```{r}
 ggraph(g, layout = 'kk') + 
@@ -103,6 +139,7 @@ ggraph(g, layout = 'kk') +
   geom_node_point(aes(size = popularity, color = subject)) +
   theme_graph()
 ```
+We might wish instead to size the points by years of experience, as we do below.
 
 ```{r}
 ggraph(g, layout = 'kk') + 
@@ -114,15 +151,7 @@ ggraph(g, layout = 'kk') +
   theme_graph()
 ```
 
-```{r}
-ggraph(g, layout = 'kk') + 
-  geom_edge_fan(aes(alpha = nominee_rank), 
-                arrow = arrow(length = unit(4, 'mm')),
-                start_cap = circle(6, 'mm'),
-                end_cap = circle(6, 'mm')) + 
-  geom_node_point(aes(size = popularity, color = years_of_experience)) +
-  theme_graph()
-```
+We can use names (if anonymized or otherwise ethically appropriate for our analysis), as below.
 
 ```{r}
 ggraph(g, layout = 'kk') + 
@@ -133,6 +162,7 @@ ggraph(g, layout = 'kk') +
   geom_node_label(aes(label = name, size = popularity)) +
   theme_graph()
 ```
+Lastly, we can identify sub-groups within our network and use color to indicate which individuals are a part of which sub-groups, as below. 
 
 ```{r}
 g %>%
@@ -150,7 +180,14 @@ g %>%
 
 #### [**Your Turn**]{style="color: green;"} **⤵**
 
+Which visualization is most helpful for understanding who may be influential in the network? Why?
+
+- 
+- 
+
 ## 5. Calculating Descriptive Statistics
+
+Finally, we can calculate a range of network statistics, as below.
 
 ```{r}
 g <- g %>% 
@@ -161,13 +198,13 @@ g <- g %>%
   mutate(centrality_eigen = centrality_eigen())
 
 g %>% 
-  arrange(desc(in_degree_centrality)) %>% 
-  as_tibble()
-
-g %>% 
   as_tibble() %>% 
   skimr::skim()
+```
 
+We could also group our data by either years of experience or subject to begin to understand differences in centrality (and, potentially, influence), as below.
+
+```{r}
 g %>% 
   as_tibble() %>% 
   group_by(subject) %>% 
@@ -184,3 +221,8 @@ g %>%
 ```
 
 #### [**Your Turn**]{style="color: green;"} **⤵**
+
+What is associated with an individual being more (or less) central in the network?
+
+- 
+- 
