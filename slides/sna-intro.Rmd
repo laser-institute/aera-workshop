@@ -118,7 +118,7 @@ Mishra (2005)](https://journals.sagepub.com/doi/abs/10.2190/0EW7-01WB-BKHL-QDYV)
 
 --
 
-<h3>Idea #1: Though we often focus on individuals (or the depedencies between individuals), social network analysis allows us to focus on relationships between individuals</h3>
+<h3>Idea #1: Though we often focus on individuals (or the dependencies between individuals), social network analysis allows us to focus on relationships between individuals</h3>
 
 ---
 
@@ -142,8 +142,8 @@ class: clear, inverse, center, middle
 --
 
 - The data we use as input, too, can take different forms:
-  - Self-reported relationships (e.g., [Horn et al., 2020](https://journals.sagepub.com/doi/full/10.1177/2332858420914898))
-  - Relationships inferred from digital sources of data (e.g., [Coburn et al., 2012](https://www.journals.uchicago.edu/doi/full/10.1086/667699) and [Hu et al., 2018](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C43&q=pinterest+torphy&btnG=) and [Staudt Willet & Carpenter, 2020](https://www.tandfonline.com/doi/full/10.1080/15391523.2020.1722978))
+  - Self-reported relationships (e.g., [Coburn et al., 2012](https://www.journals.uchicago.edu/doi/full/10.1086/667699), [Horn et al., 2020](https://journals.sagepub.com/doi/full/10.1177/2332858420914898), and [Spillane et al. (2012)](https://journals.sagepub.com/doi/full/10.3102/0002831212459339))
+  - Relationships inferred from digital sources of data (e.g., [Chen and Huang, 2020](https://onlinelibrary.wiley.com/doi/full/10.1111/jcal.12355), [Hu et al., 2018](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C43&q=pinterest+torphy&btnG=), [Kellogg et al., 2014](https://www.erudit.org/en/journals/irrodl/1900-v1-n1-irrodl04945/1065545ar/abstract/), and [Staudt Willet & Carpenter, 2020](https://www.tandfonline.com/doi/full/10.1080/15391523.2020.1722978))
 
 --
 
@@ -262,7 +262,7 @@ How might ethical challenges intersect with your social network analyses?
 
 # Summary
 
-- Idea #1: Though we often focus on individuals (or the depedencies between individuals), social network analysis allows us to focus on relationships between individuals
+- Idea #1: Though we often focus on individuals (or the dependencies between individuals), social network analysis allows us to focus on relationships between individuals
 - Idea #2: The kinds of relationships we study depend on our research questions&mdash;and, prior research and theory can guide us
 - Idea #3: Social network analysis refers to a collection of methods for visualizing, describing, and modeling social network data
 - Idea #4: Relationships can be measured using self-reported and&mdash;increasingly&mdash;digital data sources
@@ -294,3 +294,9 @@ Thank you for attending our workshop today!
 - [Homepage and interest form](https://www.fi.ncsu.edu/projects/laser-institute/)
 - [Resources for this workshop](https://github.com/laser-institute/aera-workshop)
 - [Resources for the LASER Institute](https://github.com/laser-institute)
+
+--- 
+
+# Contact
+
+
