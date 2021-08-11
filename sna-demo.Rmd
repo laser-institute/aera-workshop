@@ -1,0 +1,186 @@
+---
+title: 'Public Sentiment and the State Standards'
+subtitle: 'Text Mining Module 1 Overview'
+author: "The LASER Team"
+date: "`r format(Sys.Date(),'%B %e, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 5
+    toc_float: yes
+bibliography: lit/references.bib
+csl: lit/apa.csl
+---
+
+Welcome to the \*social network analysis\* demo! To complete this, click the green arrows to the right of each code chunk.
+
+## 1. Loading, Setting Up
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+set.seed(0811)
+
+library(tidyverse)
+library(tidygraph)
+library(ggraph)
+library(here)
+
+d <- read_csv(here('data', 'teacher-network-data-relations.csv'))
+
+u <- read_csv(here('data', 'teacher-network-data-users.csv'))
+
+```
+
+```{r}
+glimpse(d)
+```
+
+```{r}
+glimpse(u)
+```
+
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 2. Preparing Data
+
+```{r}
+d_long <- d %>% 
+  pivot_longer(most_helpful_1:most_helpful_3, names_to = "nominee") %>% 
+  mutate(nominee_rank = str_sub(nominee, start = -1),
+         nominee_rank = as.integer(nominee_rank)) %>% 
+  select(-nominee) %>% 
+  filter(!is.na(value))
+
+d_long
+```
+
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 3. Creating a Graph 'Object' and Preparing to Visualize the Network
+
+```{r}
+g <- tbl_graph(edges = d_long)
+
+g
+```
+
+```{r}
+g <- tbl_graph(edges = d_long, nodes = u)
+
+g
+```
+
+```{r}
+g <- g %>% 
+  mutate(popularity = centrality_degree(mode = 'in')) %>% 
+  activate("edges") %>% 
+  mutate(nominee_rank = as.factor(nominee_rank))
+```
+
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 4. Creating and Refining a Network Visualization
+
+```{r}
+ggraph(g, layout = 'kk') + 
+  geom_edge_fan(aes(alpha = nominee_rank), 
+                arrow = arrow(length = unit(4, 'mm')),
+                start_cap = circle(6, 'mm'),
+                end_cap = circle(6, 'mm')) + 
+  geom_node_point(aes(size = popularity)) +
+  theme_graph()
+```
+
+```{r}
+ggraph(g, layout = 'kk') + 
+  geom_edge_fan(aes(alpha = nominee_rank), 
+                arrow = arrow(length = unit(4, 'mm')),
+                start_cap = circle(6, 'mm'),
+                end_cap = circle(6, 'mm')) + 
+  geom_node_point(aes(size = popularity, color = subject)) +
+  theme_graph()
+```
+
+```{r}
+ggraph(g, layout = 'kk') + 
+  geom_edge_fan(aes(alpha = nominee_rank), 
+                arrow = arrow(length = unit(4, 'mm')),
+                start_cap = circle(6, 'mm'),
+                end_cap = circle(6, 'mm')) + 
+  geom_node_point(aes(size = years_of_experience, color = subject)) +
+  theme_graph()
+```
+
+```{r}
+ggraph(g, layout = 'kk') + 
+  geom_edge_fan(aes(alpha = nominee_rank), 
+                arrow = arrow(length = unit(4, 'mm')),
+                start_cap = circle(6, 'mm'),
+                end_cap = circle(6, 'mm')) + 
+  geom_node_point(aes(size = popularity, color = years_of_experience)) +
+  theme_graph()
+```
+
+```{r}
+ggraph(g, layout = 'kk') + 
+  geom_edge_fan(aes(alpha = nominee_rank), 
+                arrow = arrow(length = unit(4, 'mm')),
+                start_cap = circle(6, 'mm'),
+                end_cap = circle(6, 'mm')) + 
+  geom_node_label(aes(label = name, size = popularity)) +
+  theme_graph()
+```
+
+```{r}
+g %>%
+  activate(nodes) %>%
+  mutate(group = group_spinglass()) %>% 
+  ggraph(layout = 'kk') + 
+  geom_edge_fan(aes(alpha = nominee_rank), 
+                arrow = arrow(length = unit(4, 'mm')),
+                start_cap = circle(6, 'mm'),
+                end_cap = circle(6, 'mm')) + 
+  geom_node_label(aes(label = name, size = popularity, color = as.factor(group))) +
+  theme_graph() +
+  scale_color_discrete("Group", type = "qual")
+```
+
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 5. Calculating Descriptive Statistics
+
+```{r}
+g <- g %>% 
+  activate("nodes") %>% 
+  rename(in_degree_centrality = popularity) %>% 
+  mutate(out_degree = centrality_degree(mode = 'out')) %>% 
+  mutate(betweenness_centrality = centrality_betweenness()) %>% 
+  mutate(centrality_eigen = centrality_eigen())
+
+g %>% 
+  arrange(desc(in_degree_centrality)) %>% 
+  as_tibble()
+
+g %>% 
+  as_tibble() %>% 
+  skimr::skim()
+
+g %>% 
+  as_tibble() %>% 
+  group_by(subject) %>% 
+  select(-name) %>% 
+  summarize(mean_in_degree_centrality = mean(in_degree_centrality),
+            sd_in_degree_centrality = sd(in_degree_centrality))
+
+g %>% 
+  as_tibble() %>% 
+  mutate(high_experience = if_else(years_of_experience > 5, 1, 0)) %>% 
+  group_by(high_experience) %>% 
+  summarize(mean_in_degree_centrality = mean(in_degree_centrality),
+            sd_in_degree_centrality = sd(in_degree_centrality))
+```
+
+#### [**Your Turn**]{style="color: green;"} **⤵**

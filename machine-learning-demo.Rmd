@@ -1,0 +1,310 @@
+---
+title: "Machine Learning: Build a baseline model"
+author: "The LASER TEAM"
+output:
+  html_document: default
+  pdf_document: default
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+In this session, we will replicate the experiment in the paper
+([Predicting STEM and Non-STEM College Major Enrollment from Middle
+School Interaction with Mathematics Educational
+Software](https://educationaldatamining.org/EDM2014/uploads/procs2014/short%20papers/276_EDM-2014-Short.pdf)).
+We first need to understand the learning context and then build a
+machine learning model with the dataset. There is another critical step
+between these two steps, exploring variables in the dataset to gain an
+in-depth view of it. Given time constraints, we will skip this step in
+this session.
+
+## Understand the learning context
+
+First, let's read the brief (four page) paper that will help to set the
+context for this session: [Predicting STEM and Non-STEM College Major
+Enrollment from Middle School Interaction with Mathematics Educational
+Software](https://educationaldatamining.org/EDM2014/uploads/procs2014/short%20papers/276_EDM-2014-Short.pdf).
+
+Use the following questions to guide your reading of the paper:
+
+-   What kinds of learning activities are available in the ASSISTment
+    system?
+-   What's the research question?
+-   What's the prediction task?
+-   What are the variables used in the prediction task?
+-   How might these variables be informative for the prediction task?
+-   What kinds of new knowledge does this study add to the field of STEM
+    education?
+
+#### [Your Turn]{style="color: green;"} ⤵ {style="font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"}
+
+-   Which feature (variable) is a good predictor of the classification
+    task? (poll)
+
+## Access the dataset
+
+After reading the paper, we can see that the task is to predict whether
+a student will choose STEM majors and the authors used the following
+variables to predict STEM major enrollment: carelessness, knowledge,
+correctness, boredom, engaged concentration, confusion, frustration,
+off-task, gaming, and number of actions.
+
+We will use a portion of the ASSISTment data from a [data mining
+competition](https://sites.google.com/view/assistmentsdatamining/home?authuser=0)
+to replicate the experiment in the paper, but the prediction task is not
+whether a student will choose STEM majors, instead, it is predicting
+whether the students (who have now finished college) pursue a career in
+STEM fields (1) or not (0).
+
+We will use the dataset (i.e, `dat_csv_combine_final.csv`) to run a
+logistic regression (i.e, a supervised Machine Learning algorithm which
+is used for classification problems) experiment.
+
+## Load the packages
+
+We'll load four packages for this experiment. {tidymodels} consists of
+several core packages, including {rsample} (for sample splitting (e.g.
+train/test or cross-validation)), recipes (for pre-processing),
+{parsnip} (for specifying the model), and yardstick (for evaluating the
+model).
+
+```{r}
+library(tidymodels)
+library(readr)
+library(glmnet)
+library(here)
+```
+
+## Load the dataset
+
+```{r}
+dat_csv_combine <- read_csv(here("data", "dat_csv_combine_final.csv"))
+
+dat_csv_combine <- dat_csv_combine %>% 
+  mutate(isSTEM = as.character(isSTEM))
+```
+
+Check the dimension of the dataset using glimpse:
+
+```{r}
+glimpse(dat_csv_combine)
+```
+
+You will see that there are 514 students and 11 variables in this
+dataset.
+
+Next, let's check details about this dataset using the handy `count()`
+function, which works as follows
+
+```{r}
+dat_csv_combine %>% 
+  count(isSTEM)
+```
+
+We can see, in this dataset, 164 students chose STEM and 350 students
+chose non-STEM.
+
+#### [Your Turn]{style="color: green;"} ⤵ {style="font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"}
+
+-   Without a model, just with random guess, how likely you would make a
+    correct prediction of whether a student would choose STEM?
+
+This is an imbalanced dataset (164:350). While there are several methods
+for combating this issue using recipes (search for steps to upsample or
+downsample) or other more specialized packages like themis, the analyses
+shown below analyze the data as-is.
+
+Now, look closely at the values of features and you will notice that the
+range of "number of actions" is not the same as the other variables. We
+should scale it so that they have the same range. We won't use tidyverse
+code (and the `mutate()` function) below, as it's a bit easier to write
+this code this way, using the `$` operator to directly change the
+variable.
+
+```{r}
+dat_csv_combine$NumActions <- rescale(dat_csv_combine$NumActions, 
+                                      to = c(0, 1), 
+                                      from = range(dat_csv_combine$NumActions, 
+                                                   na.rm = TRUE, 
+                                                   finite = TRUE))
+```
+
+## Data splitting & resampling
+
+For a data splitting strategy, let's reserve 25% of the data to the test
+set. Since we have an imbalanced dataset, we'll use a stratified random
+sample:
+
+```{r}
+set.seed(123) #set.seed is used so that we can reproduce the result since splitting might be different every time we use initial_split function
+
+splits <- initial_split(dat_csv_combine, strata = isSTEM)
+
+data_other <- training(splits) #this dataset will be used to build models
+
+data_test  <- testing(splits) #we will never use this dataset in the process of building models. This dataset is only for final test!
+```
+
+The initial_split() function is specially built to separate the dataset
+into a training and testing set. By default, it holds 3/4 of the data
+for training and the rest for testing. That can be changed by passing
+the prop argument. For instance,
+`splits <- initial_split(dat_csv_combine, prop = 0.6)`.
+
+Here is training set proportions by `isSTEM:`
+
+```{r}
+data_other %>% 
+  count(isSTEM)
+```
+
+Here is test set proportions by `isSTEM`:
+
+```{r}
+data_test  %>% 
+  count(isSTEM)
+```
+
+## Single resample
+
+To build the model, let's create a single resample called a validation
+set. In {tidymodels}, a validation set is treated as a single iteration
+of resampling. This will be a split from the 386 students that were not
+used for testing, which we called data_other. This split creates two new
+datasets:
+
+-   the set held out for the purpose of measuring performance, called
+    the validation set, and
+
+-   the remaining data used to fit the model, called the training set.
+
+We'll use the `validation_split()` function to allocate 20% of the
+data_other dataset to the validation set and the remaining 80% to the
+training set. This means that our model performance metrics will be
+computed on a single set of 76 (or 78) instances (20%\*386). This is
+fairly small, we usually would not do single resample with such as small
+dataset. Here, we are doing it so that we know how to run a single
+resample experiment.
+
+```{r}
+set.seed(234)
+# Create data split for train and test
+data_other_split <- initial_split(data_other,
+                                prop = 0.8,
+                                strata = isSTEM)
+
+# Create training data
+data_other_train <- data_other_split %>%
+                    training()
+
+# Create testing data
+data_other_validation <- data_other_split %>%
+                    testing()
+
+# Checking the number of rows in train and test dataset
+nrow(data_other_train)
+nrow(data_other_validation)
+```
+
+This function, like initial_split(), has the same strata argument, which
+uses stratified sampling to create the resample. This means that we'll
+have roughly the same proportions of students who chose and did not
+choose STEM in our new validation and training sets, as compared to the
+original data_other proportions.
+
+## A first model
+
+Since our outcome variable `isSTEM` is categorical, logistic regression
+would be a good first model to start. This is also the algorithm in the
+paper. For logistic regression, the predicted label should be factor.
+
+```{r}
+data_other_train <- data_other_train %>% 
+  mutate(isSTEM = as.factor(isSTEM))
+
+data_other_validation <- data_other_validation %>% 
+  mutate(isSTEM = as.factor(isSTEM))
+```
+
+Next, let's create the model with data_other_train.
+
+```{r}
+fitted_logistic_model<- logistic_reg() %>%
+        # Set the engine
+        set_engine("glm") %>%
+        # Set the mode
+        set_mode("classification") %>%
+        # Fit the model
+        fit(isSTEM~., data = data_other_train) #the training data is data_other_train and the predicted label is isSTEM
+```
+
+Now, let's take a look at the model
+
+```{r}
+temp <- tidy(fitted_logistic_model)    # Generate Summary Table
+temp
+```
+
+#### [Your Turn]{style="color: green;"} ⤵ {style="font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"}
+
+-   Which feature is a good predictor of the classification task? (poll)
+
+You might notice that not all features are significant predictors as we
+have a really small dataset for training the data. It means that with
+this model, our prediction might not be accurate. Let's take a look at
+the accuracy. We will use data_other_validation to get the model
+performance.
+
+```{r}
+# Class prediction
+pred_class <- predict(fitted_logistic_model,
+                      new_data = data_other_validation,
+                      type = "class")
+
+pred_class[1:5,] # this gives us the first 5 predicted results
+```
+
+Let's compare the predicted result and the true value:
+
+```{r}
+prediction_results <- data_other_validation %>%
+  select(isSTEM) %>%
+  bind_cols(pred_class)
+
+prediction_results[1:5, ] # this gives us the first 5 true values versus predicted results
+```
+
+Next, let's take a look at the accuracy of the model with function
+accuracy. We can use percent accuracy and chance corrected accuracy
+(i.e., Kappa) to evaluate the model. We can get the percent accuracy:
+
+```{r}
+accuracy(prediction_results, truth = isSTEM,
+         estimate = .pred_class)
+```
+
+We can get the Kappa:
+
+```{r}
+kap(prediction_results, truth = isSTEM,
+         estimate = .pred_class)
+```
+
+We notice that the model is not doing well. Next, we want to closely
+look at the confusion matrix to analyze the model performance.
+
+```{r}
+conf_mat(prediction_results, truth = isSTEM,
+         estimate = .pred_class)
+```
+
+#### [Your Turn]{style="color: green;"} ⤵ {style="font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"}
+
+-   What do you notice?
