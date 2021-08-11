@@ -32,9 +32,9 @@ class: clear, title-slide, inverse, center, top, middle
 ---
 # Agenda: Two parts
 
-1. Brief overview of network analysis (15 min.)
+1. Brief overview of network analysis (20 min.)
   - Introducing five ideas 
-2. Walkthrough of a network analysis learning lab (25 min.)
+2. Walkthrough of a network analysis learning lab (20 min.)
   - You running code using RStudio Cloud for a social network analysis
 
 ---
@@ -47,12 +47,11 @@ class: clear, inverse, center, middle
 
 # 1. Overview 
 
---
 1. Why use network analysis?
-1. **What** is network analysis?
-1. What are **common techniques** used for network analysis? 
-1. What are some of the **technical and ethical considerations**? 
-1. Summary of five big ideas
+1. What is network analysis?
+1. What are common techniques used for network analysis? 
+1. What are some of the technical and ethical considerations? 
+1. Summary
 
 ---
 class: clear, inverse, center, middle
@@ -81,8 +80,6 @@ class: clear, inverse, center, middle
 ---
 
 class: clear, inverse, center, middle
-
-# Brief reflection question
 
 What are some aspects of networks that may matter to your own life&mdash;and research and teaching?
 
@@ -147,7 +144,7 @@ class: clear, inverse, center, middle
 
 --
 
-<h3>Idea #2: The kinds of relationships we study depend on our research questions&mdash;and, prior research and theory can guide us</h3>
+<h3>Idea #2: The kinds of relationships we investigate depend on our research questions&mdash;prior research and theory can guide us</h3>
 
 ---
 
@@ -164,13 +161,11 @@ class: clear, inverse, center, middle
 
 --
 
-<h3>Idea #3: Social network analysis refers to a collection of methods for visualizing, describing, and modeling social network data</h3>
+<h3>Idea #3: Social network analysis is a collection of methods for visualizing, describing, and modeling social network data&mdash; which technique(s) you choose depends on the claims you want to make</h3>
 
 ---
 
 class: clear, inverse, center, middle
-
-# Brief reflection questions
 
 What are some ways you could gather data on relationships? 
 
@@ -214,8 +209,6 @@ class: clear, inverse, center, middle
 
 class: clear, inverse, center, middle
 
-# Brief reflection question
-
 What are your goals for analyzing social network data?
 
 ---
@@ -254,19 +247,30 @@ class: clear, inverse, center, middle
 
 class: clear, inverse, center, middle
 
-# Brief reflection question
-
-How might ethical challenges intersect with your social network analyses?
+How might ethical challenges intersect with your social network analysis research?
 
 ---
 
-# Summary
+# 1.5. Summary of ideas
 
-- Idea #1: Though we often focus on individuals (or the dependencies between individuals), social network analysis allows us to focus on relationships between individuals
-- Idea #2: The kinds of relationships we study depend on our research questions&mdash;and, prior research and theory can guide us
-- Idea #3: Social network analysis refers to a collection of methods for visualizing, describing, and modeling social network data
-- Idea #4: Relationships can be measured using self-reported and&mdash;increasingly&mdash;digital data sources
-- Idea #5: An edgelist is a key data structure that can position us to visualize, describe, and model social network data
+- Though we often focus on individuals (or the dependencies between individuals), **social network analysis allows us to focus on relationships between individuals**
+
+--
+
+- **The kinds of relationships we investigate depend on our research questions**&mdash;prior research and theory can guide us  
+
+--
+
+- Social network analysis is a collection of methods for visualizing, describing, and modeling social network data&mdash;**which technique(s) you choose depends on the claims you want to make**
+
+--
+
+- **Relationships can be measured using self-reported and&mdash;increasingly&mdash;digital data sources**
+
+--
+
+- **An edgelist is a key data structure** that can position us to visualize, describe, and model social network data
+
 
 ---
 
@@ -295,8 +299,14 @@ Thank you for attending our workshop today!
 - [Resources for this workshop](https://github.com/laser-institute/aera-workshop)
 - [Resources for the LASER Institute](https://github.com/laser-institute)
 
---- 
+---
 
 # Contact
 
+[Homepage and interest form](https://www.fi.ncsu.edu/projects/laser-institute/)
 
+- Shaun B. Kellogg, North Carolina State University  
+- Rob Moore, University of Florida  
+- Shiyan Jiang, North Carolina State University  
+- Joshua M. Rosenberg, University of Tennessee, Knoxville  
+- Jennifer Houchins, North Carolina State University  

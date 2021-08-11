@@ -20,6 +20,7 @@ Welcome to the \*social network analysis\* demo! To complete this, click the gre
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+In this section, we load packages with the `library()` function
 ```{r}
 set.seed(0811)
 
@@ -31,7 +32,6 @@ library(here)
 d <- read_csv(here('data', 'teacher-network-data-relations.csv'))
 
 u <- read_csv(here('data', 'teacher-network-data-users.csv'))
-
 ```
 
 ```{r}
