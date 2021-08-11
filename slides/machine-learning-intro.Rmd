@@ -131,6 +131,8 @@ class: clear, middle
 - Lack of (good) data
 
 - Interpretability 
+
+- Learning in context
 ]
 
 ---
