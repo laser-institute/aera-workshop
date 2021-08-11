@@ -197,8 +197,9 @@ pre code {
 <p>After reading the paper, we can see that the task is to predict whether a student will choose STEM majors and the authors used the following variables to predict STEM major enrollment: carelessness, knowledge, correctness, boredom, engaged concentration, confusion, frustration, off-task, gaming, and number of actions.</p>
 <p>We will use a portion of the ASSISTment data from a <a href="https://sites.google.com/view/assistmentsdatamining/home?authuser=0">data mining competition</a> to replicate the experiment in the paper, but the prediction task is not whether a student will choose STEM majors, instead, it is predicting whether the students (who have now finished college) pursue a career in STEM fields (1) or not (0).</p>
 <p>We will use the dataset (i.e, <code>dat_csv_combine_final.csv</code>) to run a logistic regression (i.e, a supervised Machine Learning algorithm which is used for classification problems) experiment.</p>
-<div id="load-the-packages" class="section level3">
-<h3>Load the packages</h3>
+</div>
+<div id="load-the-packages" class="section level2">
+<h2>Load the packages</h2>
 <p>We’ll load four packages for this experiment. {tidymodels} consists of several core packages, including {rsample} (for sample splitting (e.g. train/test or cross-validation)), recipes (for pre-processing), {parsnip} (for specifying the model), and yardstick (for evaluating the model).</p>
 <pre class="r"><code>library(tidymodels)</code></pre>
 <pre><code>## ── Attaching packages ────────────────────────────────────── tidymodels 0.1.3 ──</code></pre>
@@ -236,8 +237,8 @@ pre code {
 <pre class="r"><code>library(here)</code></pre>
 <pre><code>## here() starts at /cloud/project</code></pre>
 </div>
-<div id="load-the-dataset" class="section level3">
-<h3>Load the dataset</h3>
+<div id="load-the-dataset" class="section level2">
+<h2>Load the dataset</h2>
 <pre class="r"><code>dat_csv_combine &lt;- read_csv(here(&quot;data&quot;, &quot;dat_csv_combine_final.csv&quot;))</code></pre>
 <pre><code>## 
 ## ── Column specification ────────────────────────────────────────────────────────
@@ -295,8 +296,8 @@ pre code {
                                                    finite = TRUE))</code></pre>
 </div>
 </div>
-<div id="data-splitting-resampling" class="section level3">
-<h3>Data splitting &amp; resampling</h3>
+<div id="data-splitting-resampling" class="section level2">
+<h2>Data splitting &amp; resampling</h2>
 <p>For a data splitting strategy, let’s reserve 25% of the data to the test set. Since we have an imbalanced dataset, we’ll use a stratified random sample:</p>
 <pre class="r"><code>set.seed(123) #set.seed is used so that we can reproduce the result since splitting might be different every time we use initial_split function
 
@@ -322,7 +323,6 @@ data_test  &lt;- testing(splits) #we will never use this dataset in the process 
 ##   &lt;chr&gt;  &lt;int&gt;
 ## 1 0         88
 ## 2 1         41</code></pre>
-</div>
 </div>
 <div id="single-resample" class="section level2">
 <h2>Single resample</h2>

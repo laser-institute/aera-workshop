@@ -67,7 +67,7 @@ We will use the dataset (i.e, `dat_csv_combine_final.csv`) to run a
 logistic regression (i.e, a supervised Machine Learning algorithm which
 is used for classification problems) experiment.
 
-### Load the packages
+## Load the packages
 
 We'll load four packages for this experiment. {tidymodels} consists of
 several core packages, including {rsample} (for sample splitting (e.g.
@@ -82,7 +82,7 @@ library(glmnet)
 library(here)
 ```
 
-### Load the dataset
+## Load the dataset
 
 ```{r}
 dat_csv_combine <- read_csv(here("data", "dat_csv_combine_final.csv"))
@@ -136,7 +136,7 @@ dat_csv_combine$NumActions <- rescale(dat_csv_combine$NumActions,
                                                    finite = TRUE))
 ```
 
-### Data splitting & resampling
+## Data splitting & resampling
 
 For a data splitting strategy, let's reserve 25% of the data to the test
 set. Since we have an imbalanced dataset, we'll use a stratified random
