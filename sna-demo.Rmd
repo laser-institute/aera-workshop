@@ -222,7 +222,7 @@ g %>%
 
 #### [**Your Turn**]{style="color: green;"} **⤵**
 
-What is associated with an individual being more (or less) central in the network?
+Based on the descriptive statistics, what can we say is associated with an individual being more (or less) central in the network?
 
 - 
 - 
