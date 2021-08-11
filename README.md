@@ -44,7 +44,7 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 **3:20-4:00.** Intro to Social Network Analysis (SNA) in STEM
 
--   **Introduction to Social Network Analysis** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/text-mining-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/text-mining-demo.html) designed to illustrate how SNA can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing relational data. Content for this workshop is drawn from from [SNA Module 1: The Social Network Perspective and MOOC-Eds](https://github.com/laser-institute/network-analysis) taught at the LASER Institute Summer Workshop.
+-   **Introduction to Social Network Analysis** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/sna-intro.html#1) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/sna-demo.html) designed to illustrate how SNA can be applied in STEM education research and to provide workshop participants hands-on experience with popular techniques for collecting, processing, and analyzing relational data. Content for this workshop is drawn from from [SNA Module 1: The Social Network Perspective and MOOC-Eds](https://github.com/laser-institute/network-analysis) taught at the LASER Institute Summer Workshop.
 
 ### Acknowledgements
 
