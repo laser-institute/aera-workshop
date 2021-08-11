@@ -12,7 +12,9 @@ bibliography: lit/references.bib
 csl: lit/apa.csl
 ---
 
-# 1. Loading, Setting Up
+Welcome to the \*social network analysis\* demo! To complete this, click the green arrows to the right of each code chunk.
+
+## 1. Loading, Setting Up
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -40,7 +42,9 @@ glimpse(d)
 glimpse(u)
 ```
 
-# 2. Preparing Data
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 2. Preparing Data
 
 ```{r}
 d_long <- d %>% 
@@ -53,7 +57,9 @@ d_long <- d %>%
 d_long
 ```
 
-# 3. Creating a Graph 'Object' and Preparing to Visualize the Network
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 3. Creating a Graph 'Object' and Preparing to Visualize the Network
 
 ```{r}
 g <- tbl_graph(edges = d_long)
@@ -74,7 +80,9 @@ g <- g %>%
   mutate(nominee_rank = as.factor(nominee_rank))
 ```
 
-# 5. Creating and Refining a Network Visualization
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 4. Creating and Refining a Network Visualization
 
 ```{r}
 ggraph(g, layout = 'kk') + 
@@ -140,7 +148,9 @@ g %>%
   scale_color_discrete("Group", type = "qual")
 ```
 
-# 6. Calculating Descriptive Statistics
+#### [**Your Turn**]{style="color: green;"} **⤵**
+
+## 5. Calculating Descriptive Statistics
 
 ```{r}
 g <- g %>% 
@@ -172,3 +182,5 @@ g %>%
   summarize(mean_in_degree_centrality = mean(in_degree_centrality),
             sd_in_degree_centrality = sd(in_degree_centrality))
 ```
+
+#### [**Your Turn**]{style="color: green;"} **⤵**
