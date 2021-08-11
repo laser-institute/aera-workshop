@@ -111,6 +111,21 @@ ggraph(g, layout = 'kk') +
 ```
 
 ```{r}
+g %>%
+  activate(nodes) %>%
+  mutate(group = group_spinglass()) %>% 
+  ggraph(layout = 'kk') + 
+  geom_edge_fan(aes(alpha = nominee_rank), 
+                arrow = arrow(length = unit(4, 'mm')),
+                start_cap = circle(6, 'mm'),
+                end_cap = circle(6, 'mm')) + 
+  geom_node_label(aes(label = name, size = popularity, color = as.factor(group))) +
+  theme_graph() +
+  scale_color_discrete("Group", type = "qual")
+```
+
+
+```{r}
 g <- g %>% 
   activate("nodes") %>% 
   rename(in_degree_centrality = popularity) %>% 
