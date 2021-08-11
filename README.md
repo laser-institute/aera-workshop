@@ -26,7 +26,7 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 **1:00-1:30.** Introduction to the Learning Analytics in STEM Ed Research (LASER)
 
--   **Introduction to the LASER Institute** consists of a [presentation](https://docs.google.com/presentation/d/e/2PACX-1vQWCXojHXfE_nDXyxBju1A8XRZ92OtfJXAgaG44l6ZPRtIyGcUyQqsbgAZ0YoW_w6pLltpqt3iqp3pb/pub?start=false&loop=false&delayms=60000) designed to provide an overview of the Learning Analytics in STEM Ed Research (LASER) Institute, introduce the field of Learning Analytics, and prepare participants to use [RStudio Cloud](https://rstudio.cloud/) to access the presentations and demos located on our [AERA-ICPSR LASER Workshop workspace](https://rstudio.cloud/spaces/159154/join?access_code=MlqXbTuL20QPR7GVmyyKDkuWwqUvhRcmVFvRRZuz).
+-   **Introduction to the LASER Institute** consists of a [presentation](https://docs.google.com/presentation/d/e/2PACX-1vQWCXojHXfE_nDXyxBju1A8XRZ92OtfJXAgaG44l6ZPRtIyGcUyQqsbgAZ0YoW_w6pLltpqt3iqp3pb/pub?start=false&loop=false&delayms=60000) designed to provide an overview of the Learning Analytics in STEM Ed Research (LASER) Institute, introduce the field of Learning Analytics, and prepare participants to use [RStudio Cloud](https://rstudio.cloud/) to access the presentations and demos located on our [AERA-ICPSR LASER Workshop workspace](https://rstudio.cloud/spaces/159154/join?access_code=MlqXbTuL20QPR7GVmyyKDkuWwqUvhRcmVFvRRZuz). For a more in-depth answer to the burning question, "What is Learning Analytics?" we highly recommend this LASER Institute Summer Workshop [Keynote by Alyssa Wise](https://youtu.be/KpGtax2RBVY).
 
 **1:30-1:40.** RStudio Cloud Setup/Break
 
