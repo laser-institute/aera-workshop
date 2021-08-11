@@ -12,6 +12,8 @@ bibliography: lit/references.bib
 csl: lit/apa.csl
 ---
 
+# 1. Loading, Setting Up
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -28,9 +30,17 @@ d <- read_csv(here('data', 'teacher-network-data-relations.csv'))
 
 u <- read_csv(here('data', 'teacher-network-data-users.csv'))
 
-d
-u
 ```
+
+```{r}
+glimpse(d)
+```
+
+```{r}
+glimpse(u)
+```
+
+# 2. Preparing Data
 
 ```{r}
 d_long <- d %>% 
@@ -42,6 +52,8 @@ d_long <- d %>%
 
 d_long
 ```
+
+# 3. Creating a Graph 'Object' and Preparing to Visualize the Network
 
 ```{r}
 g <- tbl_graph(edges = d_long)
@@ -60,7 +72,11 @@ g <- g %>%
   mutate(popularity = centrality_degree(mode = 'in')) %>% 
   activate("edges") %>% 
   mutate(nominee_rank = as.factor(nominee_rank))
+```
 
+# 5. Creating and Refining a Network Visualization
+
+```{r}
 ggraph(g, layout = 'kk') + 
   geom_edge_fan(aes(alpha = nominee_rank), 
                 arrow = arrow(length = unit(4, 'mm')),
@@ -124,6 +140,7 @@ g %>%
   scale_color_discrete("Group", type = "qual")
 ```
 
+# 6. Calculating Descriptive Statistics
 
 ```{r}
 g <- g %>% 
