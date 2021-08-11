@@ -1,6 +1,6 @@
 ---
 title: "Social Network Analysis and STEM Education"
-subtitle: "A Brief Introduction & Demo"
+subtitle: "A Brief Overview & Demo"
 author: "Dr. Joshua Rosenberg, University of Tennessee, Knoxville"
 institute: "The LASER Institute"
 date: "2021/08/11 (updated: `r Sys.Date()`)"
@@ -291,7 +291,6 @@ Thank you for attending our workshop today!
 - [Learning Analytics Goes to School](https://www.routledge.com/Learning-Analytics-Goes-to-School-A-Collaborative-Approach-to-Improving/Krumm-Means-Bienkowski/p/book/9781138121836)
 - [Learning Analytics 101](https://steinhardt.nyu.edu/learning-analytics-101)
 - [Data Science in Education Using R](https://datascienceineducation.com/)
-  - [C12: SNA and social media data](https://datascienceineducation.com/c12.html)
 
 ## The LASER Institute
 
