@@ -242,7 +242,7 @@ xaringanExtra::use_panelset()
 .panelset[
 
 .panel[.panel-name[Performance]
-TM has been largely used to **evaluate academic  performance** in different contexts, especially to  essays and online assignments.
+TM has been largely used to **evaluate academic  performance** in different contexts, especially to assess essays and online assignments.
 
 - writing style
 - use of argumentation

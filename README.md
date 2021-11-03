@@ -4,6 +4,8 @@
 
 **Wednesday, August 11, 2021; 1:00pm–4:00pm**
 
+**Recording:** <https://youtu.be/b5E_KyMTpnY>
+
 ### Overview
 
 This workshop will introduce participants to Learning Analytics (LA), an emerging research and teaching field sitting at the intersection of Learning (e.g. educational technology, learning and assessment sciences), Analytics (e.g. visualization, computer/data sciences), and Human-Centered Design (e.g. usability, participatory design). LA is proving to be a powerful approach for understanding and improving the digital learning contexts highlighted in the national STEM education plan, while also examining persistent problems in STEM education from new angles.
@@ -38,7 +40,7 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 **2:30-3:10.** Intro to Machine Learning (ML) in STEM
 
--   **Introduction to Machine Learning** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/machine-learning-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/machine-learning-demo.html) designed to illustrate how machine learning can be applied in STEM education research and to provide workshop participants hands-on experience with the process of building a machine learning model. Content for this workshop is drawn from  [ML Module 1: Predicting STEM and Non-STEM College Major Enrollment](https://github.com/laser-institute/machine-learning) taught at the LASER Institute Summer Workshop.
+-   **Introduction to Machine Learning** includes a short [presentation](https://laser-institute.github.io/aera-workshop/slides/machine-learning-intro.html) and [demonstration](https://laser-institute.github.io/aera-workshop/pages/machine-learning-demo.html) designed to illustrate how machine learning can be applied in STEM education research and to provide workshop participants hands-on experience with the process of building a machine learning model. Content for this workshop is drawn from [ML Module 1: Predicting STEM and Non-STEM College Major Enrollment](https://github.com/laser-institute/machine-learning) taught at the LASER Institute Summer Workshop.
 
 **3:10-3:20.** Q&A/Break
 
