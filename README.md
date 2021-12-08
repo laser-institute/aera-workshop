@@ -14,7 +14,7 @@ The instructors will provide a brief overview of LA methodologies, literature,
 
 ### Presenters
 
--   Shaun Kellogg, North Carolina State University​
+-   Shaun B. Kellogg, North Carolina State University​
 
 -   ​Rob Moore, University of Florida 
 
